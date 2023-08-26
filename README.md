@@ -3,14 +3,15 @@ Repo almacenar ejercicios y ejemplos de clase "Pensamiento Computacional para In
 
 # Avance 1: Selección de proyecto
 El tema va a ser de un programa la cual te va a ayudar a calcular el area y perimetro de las principales figuras geometricas las cuales son:
-- El circulo
-- El triangulo
-- El cuadrado
-- El rectangulo
-- El pentagono
-- El hexagono
-- El heptagono
-- El octagono
+- El Triangulo
+- El Cuadrado
+- El Rectangulo
+- El Circulo
+- El Rombo
+- El Pentagono
+- El Hexagono
+- El Trapecio
+- El Pararelogramo
 
 # Algoritmo
 Su algoritmo va a ser de preguntarle al usuario de que es lo que quiere obtener si el area, el perimetro o ambos, y luego se preguntara cual sera la figura que se necesitara.
