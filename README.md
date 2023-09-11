@@ -26,10 +26,3 @@ Pasos:
   5. Se le preguntara cual de las figuras mostradas necesita calcular su perimetro.
   6. Si elijes ambos solamente se calculara este.
   7. Se le preguntara cual de las figuras mostradas necesita calcular su area y su perimetro.
-
-def area_paralelogramo()
-  base = float(input("Dame el valor del base "))
-  altura = float(input("Dame el valor de la altura "))
-  area= base * altura
-  print("El area del paralelogramo es de",area)
-area_paralelogramo()
