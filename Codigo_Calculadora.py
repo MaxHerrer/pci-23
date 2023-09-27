@@ -1,4 +1,5 @@
 # Calculos de Perimetros
+import math
 
 # El Triangulo
 
@@ -129,155 +130,237 @@ print("El area del paralelogramo es de",area)
 # Funciones
 
 def perimetro_triangulo():
-  lado = float(input("Dame el valor del lado "))
-  return lado + lado + lado
+    lado = float(input("Dame el valor del lado: "))
+    return lado + lado + lado
 
 def perimetro_cuadrado():
-  lado = float(input("Dame el valor del lado "))
-  return lado * 4
+    lado = float(input("Dame el valor del lado: "))
+    return lado * 4
 
 def perimetro_rectangulo():
-  lado_a = float(input("Dame el valor del lado_a "))
-  lado_b = float(input("Dame el valor del lado_b "))
-  return (lado_a * 2) + (lado_b * 2)
+    lado_a = float(input("Dame el valor del lado_a: "))
+    lado_b = float(input("Dame el valor del lado_b: "))
+    return (lado_a * 2) + (lado_b * 2)
 
 def perimetro_circulo():
-  diametro = float(input("Dame el valor del diametro "))
-  PI = 3.1416
-  return diametro * PI
+    radio = float(input("Dame el valor del radio: "))
+    PI = math.pi
+    return 2 * PI * radio
 
 def perimetro_rombo():
-  lado = float(input("Dame el valor del lado "))
-  return lado * 4
+    lado = float(input("Dame el valor del lado: "))
+    return lado * 4
 
 def perimetro_pentagono():
-  lado = float(input("Dame el valor del lado "))
-  return lado * 5
+    lado = float(input("Dame el valor del lado: "))
+    return lado * 5
 
 def perimetro_hexagono():
-  lado = float(input("Dame el valor del lado "))
-  return lado * 6
+    lado = float(input("Dame el valor del lado: "))
+    return lado * 6
 
 def perimetro_trapecio():
-  lado = float(input("Dame el valor del lado "))
-  base_mayor = float(input("Dame el valor de la base_mayor "))
-  base_menor = float(input("Dame el valor de la base_menor "))
-  return lado + lado + base_mayor + base_menor
+    lado = float(input("Dame el valor del lado: "))
+    base_mayor = float(input("Dame el valor de la base mayor: "))
+    base_menor = float(input("Dame el valor de la base menor: "))
+    return lado + lado + base_mayor + base_menor
 
 def perimetro_paralelogramo():
-  lado_a = float(input("Dame el valor del lado_a "))
-  lado_b = float(input("Dame el valor del lado_b "))
-  return (lado_a * 2) + (lado_b * 2)
+    lado_a = float(input("Dame el valor del lado_a: "))
+    lado_b = float(input("Dame el valor del lado_b: "))
+    return (lado_a * 2) + (lado_b * 2)
 
 def area_triangulo():
-  base = float(input("Dame el valor de la base "))
-  altura = float(input("Dame el valor de la altura "))
-  return (base * altura) / 2
+    base = float(input("Dame el valor de la base: "))
+    altura = float(input("Dame el valor de la altura: "))
+    return (base * altura) / 2
 
 def area_cuadrado():
-  lado = float(input("Dame el valor del lado "))
-  return lado * lado
+    lado = float(input("Dame el valor del lado: "))
+    return lado * lado
 
 def area_rectangulo():
-  base = float(input("Dame el valor del base "))
-  altura = float(input("Dame el valor de la altura "))
-  return base * altura
+    base = float(input("Dame el valor de la base: "))
+    altura = float(input("Dame el valor de la altura: "))
+    return base * altura
 
 def area_circulo():
-  radio = float(input("Dame el valor del radio "))
-  PI = 3.1416
-  return PI * (radio ** 2)
+    radio = float(input("Dame el valor del radio: "))
+    PI = math.pi
+    return PI * (radio ** 2)
   
 def area_rombo():
-  diametro_mayor = float(input("Dame el valor del diametro_mayor "))
-  diametro_menor = float(input("Dame el valor del diametro_menor "))
-  return (diametro_mayor * diametro_menor) / 2
+    diagonal_mayor = float(input("Dame el valor de la diagonal mayor: "))
+    diagonal_menor = float(input("Dame el valor de la diagonal menor: "))
+    return (diagonal_mayor * diagonal_menor) / 2
 
 def area_pentagono():
-  lado = float(input("Dame el valor del lado "))
-  altura = float(input("Dame el valor de la altura "))
-  perimetro = lado * 5
-  return (perimetro * altura) / 2
+    lado = float(input("Dame el valor del lado: "))
+    apotema = float(input("Dame el valor de la apotema: "))
+    return (5 * lado * apotema) / 2
 
 def area_hexagono():
-  lado = float(input("Dame el valor del lado "))
-  altura = float(input("Dame el valor de la altura "))
-  perimetro = lado * 6
-  return (perimetro * altura) / 2
+    lado = float(input("Dame el valor del lado: "))
+    apotema = float(input("Dame el valor de la apotema: "))
+    return (6 * lado * apotema) / 2
 
 def area_trapecio():
-  altura = float(input("Dame el valor de la altura "))
-  base_mayor = float(input("Dame el valor de la base_mayor "))
-  base_menor = float(input("Dame el valor de la base_menor "))
-  return (base_mayor * base_menor) * altura / 2
+    base_mayor = float(input("Dame el valor de la base mayor: "))
+    base_menor = float(input("Dame el valor de la base menor: "))
+    altura = float(input("Dame el valor de la altura: "))
+    return ((base_mayor + base_menor) * altura) / 2
 
-def area_pararelogramo():
-  base = float(input("Dame el valor de la base "))
-  altura = float(input("Dame el valor de la altura "))
-  return base * altura
+def area_paralelogramo():
+    base = float(input("Dame el valor de la base: "))
+    altura = float(input("Dame el valor de la altura: "))
+    return base * altura
 
 # Condicional IF
 
-opcion = input("Para obtener el area tienes que poner 1, para del perimetro 2 y para ambos 3")
-figura = input("Escribe que figura quieres obtener en minusculas")
+opcion = int(input("Para obtener el área, pon 1, para el perímetro, pon 2 y para ambos, pon 3: "))
+figura = int(input("Para triángulo pon 1, para cuadrado pon 2, para rectángulo pon 3, para círculo pon 4, para rombo pon 5, para pentágono pon 6, para trapecio pon 7 y para paralelogramo pon 8: ")) 
 if opcion == 1:
-    if figura == "triangulo":
-        area_triangulo()
-    elif figura == "cuadrado":
-        area_cuadrado()
-    elif figura == "rectangulo":
-        area_rectangulo()
-    elif figura == "circulo":
-        area_circulo()
-    elif figura == "rombo":
-        area_rombo()
-    elif figura == "pentagono":
-        area_pentagono()
-    elif figura == "trapecio":
-        area_trapecio()
-    elif figura == "paralelogramo":
-        area_pararelogramo()
+    if figura == 1:
+        print("Área del triángulo:", area_triangulo())
+    elif figura == 2:
+        print("Área del cuadrado:", area_cuadrado())
+    elif figura == 3:
+        print("Área del rectángulo:", area_rectangulo())
+    elif figura == 4:
+        print("Área del círculo:", area_circulo())
+    elif figura == 5:
+        print("Área del rombo:", area_rombo())
+    elif figura == 6:
+        print("Área del pentágono:", area_pentagono())
+    elif figura == 7:
+        print("Área del trapecio:", area_trapecio())
+    elif figura == 8:
+        print("Área del paralelogramo:", area_paralelogramo())
+    else:
+        print("Figura no válida.")
 elif opcion == 2:
-    if figura == "triangulo":
-        perimetro_triangulo()
-    elif figura == "cuadrado":
-        perimetro_cuadrado()
-    elif figura == "rectangulo":
-        perimetro_rectangulo()
-    elif figura == "circulo":
-        perimetro_circulo()
-    elif figura == "rombo":
-        perimetro_rombo()
-    elif figura == "pentagono":
-        perimetro_pentagono()
-    elif figura == "trapecio":
-        perimetro_trapecio()
-    elif figura == "paralelogramo":
-        perimetro_paralelogramo()
+    if figura == 1:
+        print("Perímetro del triángulo:", perimetro_triangulo())
+    elif figura == 2:
+        print("Perímetro del cuadrado:", perimetro_cuadrado())
+    elif figura == 3:
+        print("Perímetro del rectángulo:", perimetro_rectangulo())
+    elif figura == 4:
+        print("Perímetro del círculo:", perimetro_circulo())
+    elif figura == 5:
+        print("Perímetro del rombo:", perimetro_rombo())
+    elif figura == 6:
+        print("Perímetro del pentágono:", perimetro_pentagono())
+    elif figura == 7:
+        print("Perímetro del trapecio:", perimetro_trapecio())
+    elif figura == 8:
+        print("Perímetro del paralelogramo:", perimetro_paralelogramo())
+    else:
+        print("Figura no válida.")            
 elif opcion == 3:
-    if figura == "triangulo":
-        area_triangulo()
-        perimetro_triangulo()
-    elif figura == "cuadrado":
-        area_cuadrado()
-        perimetro_cuadrado()
-    elif figura == "rectangulo":
-        area_rectangulo()
-        perimetro_rectangulo()
-    elif figura == "circulo":
-        area_circulo()
-        perimetro_circulo()
-    elif figura == "rombo":
-        area_rombo()
-        perimetro_rombo()
-    elif figura == "pentagono":
-        area_pentagono()
-        perimetro_pentagono()
-    elif figura == "trapecio":
-        area_trapecio()
-        perimetro_trapecio()
-    elif figura == "paralelogramo":
-        area_pararelogramo()
-        perimetro_paralelogramo()
+    if figura == 1:
+        print("Área del triángulo:", area_triangulo())
+        print("Perímetro del triángulo:", perimetro_triangulo())
+    elif figura == 2:
+        print("Área del cuadrado:", area_cuadrado())
+        print("Perímetro del cuadrado:", perimetro_cuadrado())
+    elif figura == 3:
+        print("Área del rectángulo:", area_rectangulo())
+        print("Perímetro del rectángulo:", perimetro_rectangulo())
+    elif figura == 4:
+        print("Área del círculo:", area_circulo())
+        print("Perímetro del círculo:", perimetro_circulo())
+    elif figura == 5:
+        print("Área del rombo:", area_rombo())
+        print("Perímetro del rombo:", perimetro_rombo())
+    elif figura == 6:
+        print("Área del pentágono:", area_pentagono())
+        print("Perímetro del pentágono:", perimetro_pentagono())
+    elif figura == 7:
+        print("Área del trapecio:", area_trapecio())
+        print("Perímetro del trapecio:", perimetro_trapecio())
+    elif figura == 8:
+        print("Área del paralelogramo:", area_paralelogramo())
+        print("Perímetro del paralelogramo:", perimetro_paralelogramo())
+    else:
+        print("Figura no válida.")
 else:
-    print("No existe la opcion")
+        print("Opción no válida.")
+
+# Ciclos
+
+repetir = int(input("Si quieres volver a realizar la operación, pon 1, sino pon 0: "))
+while repetir == 1:
+    opcion = int(input("Para obtener el área, pon 1, para el perímetro, pon 2 y para ambos, pon 3: "))
+    figura = int(input("Para triángulo pon 1, para cuadrado pon 2, para rectángulo pon 3, para círculo pon 4, para rombo pon 5, para pentágono pon 6, para trapecio pon 7 y para paralelogramo pon 8: ")) 
+    if opcion == 1:
+        if figura == 1:
+            print("Área del triángulo:", area_triangulo())
+        elif figura == 2:
+            print("Área del cuadrado:", area_cuadrado())
+        elif figura == 3:
+            print("Área del rectángulo:", area_rectangulo())
+        elif figura == 4:
+            print("Área del círculo:", area_circulo())
+        elif figura == 5:
+            print("Área del rombo:", area_rombo())
+        elif figura == 6:
+            print("Área del pentágono:", area_pentagono())
+        elif figura == 7:
+            print("Área del trapecio:", area_trapecio())
+        elif figura == 8:
+            print("Área del paralelogramo:", area_paralelogramo())
+        else:
+            print("Figura no válida.")
+            
+    elif opcion == 2:
+        if figura == 1:
+            print("Perímetro del triángulo:", perimetro_triangulo())
+        elif figura == 2:
+            print("Perímetro del cuadrado:", perimetro_cuadrado())
+        elif figura == 3:
+            print("Perímetro del rectángulo:", perimetro_rectangulo())
+        elif figura == 4:
+            print("Perímetro del círculo:", perimetro_circulo())
+        elif figura == 5:
+            print("Perímetro del rombo:", perimetro_rombo())
+        elif figura == 6:
+            print("Perímetro del pentágono:", perimetro_pentagono())
+        elif figura == 7:
+            print("Perímetro del trapecio:", perimetro_trapecio())
+        elif figura == 8:
+            print("Perímetro del paralelogramo:", perimetro_paralelogramo())
+        else:
+            print("Figura no válida.")
+            
+    elif opcion == 3:
+        if figura == 1:
+            print("Área del triángulo:", area_triangulo())
+            print("Perímetro del triángulo:", perimetro_triangulo())
+        elif figura == 2:
+            print("Área del cuadrado:", area_cuadrado())
+            print("Perímetro del cuadrado:", perimetro_cuadrado())
+        elif figura == 3:
+            print("Área del rectángulo:", area_rectangulo())
+            print("Perímetro del rectángulo:", perimetro_rectangulo())
+        elif figura == 4:
+            print("Área del círculo:", area_circulo())
+            print("Perímetro del círculo:", perimetro_circulo())
+        elif figura == 5:
+            print("Área del rombo:", area_rombo())
+            print("Perímetro del rombo:", perimetro_rombo())
+        elif figura == 6:
+            print("Área del pentágono:", area_pentagono())
+            print("Perímetro del pentágono:", perimetro_pentagono())
+        elif figura == 7:
+            print("Área del trapecio:", area_trapecio())
+            print("Perímetro del trapecio:", perimetro_trapecio())
+        elif figura == 8:
+            print("Área del paralelogramo:", area_paralelogramo())
+            print("Perímetro del paralelogramo:", perimetro_paralelogramo())
+        else:
+            print("Figura no válida.")
+    else:
+        print("Opción no válida.")
+        
+    repetir = int(input("Si quieres volver a realizar la operación, pon 1, sino pon 0: "))
