@@ -173,7 +173,3 @@ while repetir == 1:
     repetir = int(input("Si quieres volver a realizar la operación, pon 1, sino pon 0: "))
 else:
     print("Hasta luego")
-    main()
-    repetir = int(input("Si quieres volver a realizar la operación, pon 1, sino pon 0: "))
-else:
-    print("Hasta luego")
